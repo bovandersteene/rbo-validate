@@ -4,9 +4,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
 var StringReplacePlugin = require('string-replace-webpack-plugin');
 module.exports = {
-  entry: ['./src/app/ui/index.ts'],
+  entry: ['./src/app/test/index.ts'],
   output: {
-    filename: 'build.js',
+    filename: 'rbo-validate.js',
     path: 'dist'
   },
   resolve: {
@@ -20,7 +20,7 @@ module.exports = {
   plugins: [
     new StringReplacePlugin(),
     new HtmlWebpackPlugin({
-      template: './src/app/ui/index.html',
+      template: './src/app/test/index.html',
       inject: 'body',
       hash: true
     }),
@@ -40,17 +40,5 @@ module.exports = {
       'window.jQuery': 'jquery',
       'window.jquery': 'jquery'
     })
-  ],
-  module: {
-    loaders: loaders.concat([
-      {
-        test: /\environmentVariables.ts$/,
-        loader: StringReplacePlugin.replace({
-          replacements: [{
-            pattern: /%backend_url%/ig,
-            replacement: () => 'http://localhost:8081/'
-          }]
-        })
-      }])
-  }
+  ]
 };
