@@ -2,7 +2,7 @@ var loaders = require("./loaders");
 var webpack = require('webpack');
 var StringReplacePlugin = require('string-replace-webpack-plugin');
 module.exports = {
-  entry: ['./src/app/test/index.ts'],
+  entry: ['./src/rbo-validate/index.ts'],
   output: {
     filename: 'rbo-validate.js',
     path: 'dist'

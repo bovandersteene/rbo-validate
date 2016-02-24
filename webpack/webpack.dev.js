@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
 var StringReplacePlugin = require('string-replace-webpack-plugin');
 module.exports = {
-  entry: ['./src/app/test/index.ts'],
+  entry: ['./src/test/index.ts'],
   output: {
     filename: 'rbo-validate.js',
     path: 'dist'
@@ -20,7 +20,7 @@ module.exports = {
   plugins: [
     new StringReplacePlugin(),
     new HtmlWebpackPlugin({
-      template: './src/app/test/index.html',
+      template: './src/test/index.html',
       inject: 'body',
       hash: true
     }),
