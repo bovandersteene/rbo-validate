@@ -46,6 +46,16 @@ export class AppComponent {
                 />
             </div>
           </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label" >max value: 1</label>
+            <div class="col-sm-10">
+              <input type="text"
+                  ng-model="$ctrl.minField"
+                  class="form-control"
+                  name="maxField"
+                />
+            </div>
+          </div>
       <button class="btn btn-primary" type="submit">save</button>
     </form>
     </div>
@@ -67,8 +77,9 @@ class AppController {
         this.validateModel = new ValidateModel([
             new ValidateFieldModel("email", [Validators.requireValidator, Validators.emailValidator]),
             new ValidateFieldModel("requireField", [Validators.requireValidator]),
-            new ValidateFieldModel("numberField", [Validators.requireValidator, Validators.numberValidator])
-            new ValidateFieldModel("minField", [Validators.requireValidator, Validators.minValidator(1)])
+            new ValidateFieldModel("numberField", [Validators.requireValidator, Validators.numberValidator]),
+            new ValidateFieldModel("minField", [Validators.requireValidator, Validators.minValidator(1)]),
+            new ValidateFieldModel("maxField", [Validators.requireValidator, Validators.maxValidator(1)])
         ]);
     }
 
