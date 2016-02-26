@@ -17,19 +17,20 @@ export class ValidateFormBehaviour implements IDirective {
 
     public link(scope: IScope, formElement: IAugmentedJQuery, attributes: IAttributes, controller: ValidateFormController): void {
         formElement.bind("submit", (): void => {
-            if (controller.validateFieldModel.validate()) {
+            controller.validateFieldModel.validate();
+            controller.validateFieldModel.fields.forEach((field: IValidateFieldModel) => {
+                let element: IAugmentedJQuery = formElement.find("[name='" + field.name + "']");
+                if (element) {
+                    let elementFormFields: JQuery = element.parent().parent();
+                    field.valid ?
+                        elementFormFields.removeClass("has-error") :
+                        elementFormFields.addClass("has-error");
+                }
+            });
+            if (controller.validateFieldModel.valid) {
                 controller.submit();
-            } else {
-                controller.validateFieldModel.fields.forEach((field: IValidateFieldModel) => {
-                    let element: IAugmentedJQuery = formElement.find("[name='" + field.name + "']");
-                    if (element) {
-                        let elementFormFields: JQuery = element.parent().parent();
-                        field.valid ?
-                            elementFormFields.removeClass("has-error") :
-                            elementFormFields.addClass("has-error");
-                    }
-                });
             }
+
         });
     }
 }

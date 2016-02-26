@@ -16,6 +16,7 @@ export class AppComponent {
                   name="test1"
                 />
             </div>
+          </div>
           <div class="form-group">
             <label for="email" class="col-sm-2 control-label" >required</label>
             <div class="col-sm-10">
@@ -43,7 +44,7 @@ class AppController {
     constructor() {
 
         this.validateModel = new ValidateModel([
-            new ValidateFieldModel("test1", [Validators.requireValidator]),
+            new ValidateFieldModel("test1", [Validators.requireValidator, Validators.emailValidator]),
             new ValidateFieldModel("test2", [Validators.requireValidator])
         ]);
     }
