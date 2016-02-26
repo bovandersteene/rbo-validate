@@ -13,7 +13,7 @@ export class AppComponent {
             <div class="col-sm-10">
               <input type="text" ng-model="$ctrl.email"
                   class="form-control"
-                  name="test1"
+                  name="email"
                 />
             </div>
           </div>
@@ -23,7 +23,17 @@ export class AppComponent {
               <input type="text"
                   ng-model="$ctrl.requiredField"
                   class="form-control"
-                  name="test2"
+                  name="requireField"
+                />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label" >Number</label>
+            <div class="col-sm-10">
+              <input type="text"
+                  ng-model="$ctrl.number"
+                  class="form-control"
+                  name="numberField"
                 />
             </div>
           </div>
@@ -40,12 +50,14 @@ class AppController {
     public validateModel: IValidateModel;
     public requiredField: string = "";
     public email: string = "";
+    public number: number ;
 
     constructor() {
 
         this.validateModel = new ValidateModel([
-            new ValidateFieldModel("test1", [Validators.requireValidator, Validators.emailValidator]),
-            new ValidateFieldModel("test2", [Validators.requireValidator])
+            new ValidateFieldModel("email", [Validators.requireValidator, Validators.emailValidator]),
+            new ValidateFieldModel("requireField", [Validators.requireValidator]),
+            new ValidateFieldModel("numberField", [Validators.requireValidator, Validators.numberValidate])
         ]);
     }
 

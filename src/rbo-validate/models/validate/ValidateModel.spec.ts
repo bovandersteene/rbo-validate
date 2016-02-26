@@ -18,13 +18,6 @@ describe("ValidateModel", () => {
     });
 
 
-    describe("on add ValdiateField", () => {
-        it("should add the field to the validator", () => {
-            let validateModel: ValidateModel = createModel();
-            validateModel.addValidateField(validateFieldModelMock);
-            expect(validateModel.fields).toEqual([validateFieldModelMock]);
-        });
-    });
 
     describe("on validate", () => {
         it("should call the fields validate method", () => {

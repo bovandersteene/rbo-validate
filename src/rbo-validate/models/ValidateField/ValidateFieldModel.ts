@@ -2,10 +2,9 @@ import {IValidateFieldModel} from "./IValidateFieldModel";
 import {IValidator} from "../../validators/IValidator";
 export class ValidateFieldModel implements IValidateFieldModel {
     public value: string;
-    public formField: any;
     public valid: boolean = true;
 
-    constructor(public name: string, public validators: Array<IValidator>) {
+    constructor(public name: string, public validators: Array<IValidator>, public formField?: any) {
 
     }
 
