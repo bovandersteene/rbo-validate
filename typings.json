@@ -4,9 +4,11 @@
     "angular-route": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-route.d.ts#70bf7e2bfeb0d5b1b651ef3219bcc65c8eec117e",
     "bootstrap": "github:DefinitelyTyped/DefinitelyTyped/bootstrap/bootstrap.d.ts#86dbea8fc37d9473fee465da4f0a21bea4f8cbd9",
     "jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#3a666d1bff92e944488c25599ec56a4937c17c4e",
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#86dbea8fc37d9473fee465da4f0a21bea4f8cbd9",
     "lodash": "github:DefinitelyTyped/DefinitelyTyped/lodash/lodash.d.ts#70bf7e2bfeb0d5b1b651ef3219bcc65c8eec117e"
   },
   "ambientDevDependencies": {
-    "angular-mocks": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-mocks.d.ts#77dd2668f85730372aa8e62152e652048e8b6b87"
+    "angular-mocks": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-mocks.d.ts#77dd2668f85730372aa8e62152e652048e8b6b87",
+    "require": "github:DefinitelyTyped/DefinitelyTyped/requirejs/require.d.ts#4de74cb527395c13ba20b438c3a7a419ad931f1c"
   }
 }

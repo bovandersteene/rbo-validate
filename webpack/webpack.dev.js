@@ -6,7 +6,7 @@ var StringReplacePlugin = require('string-replace-webpack-plugin');
 module.exports = {
   entry: ['./src/test/index.ts'],
   output: {
-    filename: 'rbo-validate.js',
+    filename: 'build.js',
     path: 'dist'
   },
   resolve: {
@@ -40,5 +40,8 @@ module.exports = {
       'window.jQuery': 'jquery',
       'window.jquery': 'jquery'
     })
-  ]
+  ],
+  module: {
+    loaders: loaders
+}
 };
