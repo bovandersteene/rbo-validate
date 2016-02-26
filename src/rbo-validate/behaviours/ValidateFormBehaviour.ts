@@ -20,7 +20,6 @@ export class ValidateFormBehaviour implements IDirective {
             if (controller.validateFieldModel.validate()) {
                 controller.submit();
             } else {
-                //TODO add has-errors to elements!
                 controller.validateFieldModel.fields.forEach((field: IValidateFieldModel) => {
                     let element: IAugmentedJQuery = formElement.find("[name='" + field.name + "']");
                     if (element) {

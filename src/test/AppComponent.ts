@@ -49,10 +49,6 @@ class AppController {
     }
 
     public save(): void {
-        console.log("save")
-    }
-
-    public isValid(name: string, value: any): boolean{
-
+        alert("the form has passed the validation!");
     }
 }
