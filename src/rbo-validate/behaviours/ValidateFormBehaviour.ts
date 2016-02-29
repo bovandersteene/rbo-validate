@@ -30,7 +30,10 @@ export class ValidateFormBehaviour implements IDirective {
             if (controller.validateFieldModel.valid) {
                 controller.submit();
             }
+        });
 
+        scope.$on("destroy", () => {
+            formElement.unbind("submit");
         });
     }
 }
