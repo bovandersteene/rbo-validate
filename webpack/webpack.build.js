@@ -1,11 +1,10 @@
 var loaders = require("./loaders");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
 var StringReplacePlugin = require('string-replace-webpack-plugin');
 module.exports = {
   entry: ['./src/rbo-validate/index.ts'],
   output: {
-    filename: 'build.js',
+    filename: 'rbo-validate.js',
     path: 'dist'
   },
   resolve: {
@@ -13,9 +12,8 @@ module.exports = {
     extensions: ['', '.ts', '.js', '.json']
   },
   resolveLoader: {
-    modulesDirectories: ["node_modules"]
   },
-  devtool: "source-map-inline",
+  devtool: "source-map",
   plugins: [
     new StringReplacePlugin(),
     new webpack.ProvidePlugin({
@@ -29,4 +27,3 @@ module.exports = {
     loaders: loaders
   }
 };
-

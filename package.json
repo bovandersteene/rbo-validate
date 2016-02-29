@@ -4,8 +4,7 @@
   "description": "An angular 1.5 & bootstrap validation",
   "main": "rbo-validate.js",
   "scripts": {
-    "clean": "node ./node_scripts/clean.js",
-    "prebuild": "npm run clean && typings install && npm install && npm test",
+    "prebuild": "typings install && npm install",
     "build": "webpack --config ./webpack/webpack.build.js --display-error-details --bail -p --color",
     "test": "karma start",
     "prestart": "npm install && typings install",
@@ -26,7 +25,7 @@
     "url": "https://github.com/bovandersteene/rbo-validate/issues"
   },
   "homepage": "https://github.com/bovandersteene/rbo-validate#readme",
-  "dependencies": {
+  "peerDependencies": {
     "angular": "1.5.0",
     "jquery": "2.2.0",
     "angular-route": "1.5.0",
