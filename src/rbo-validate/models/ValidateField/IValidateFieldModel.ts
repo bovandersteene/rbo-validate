@@ -3,7 +3,6 @@ export interface IValidateFieldModel {
     name: string;
     valid: boolean;
     validators: Array<IValidator>;
-    formField: any;
 
-    validate(): boolean;
+    validate(value: any): boolean;
 }

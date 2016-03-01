@@ -1,19 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "noImplicitAny": false,
-    "removeComments": true,
-    "sourceMap": true,
+    "noImplicitAny": true,
     "module": "commonjs",
+    "target": "ES5",
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "outDir": "out"
+    "sourceMap": true,
+    "declaration": true
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "out",
-    "typings/main",
-    "typings/main.d.ts"
+  "files": [
+    "typings/main.d.ts",
+    "src/rbo-validate.ts"
   ],
-  "version": "1.7.5"
+  "exclude": [
+    "node_modules"
+  ]
 }

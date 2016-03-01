@@ -5,5 +5,4 @@ export interface IValidateModel {
     fields: Array<IValidateFieldModel>;
 
     addValidateField(validateField: ValidateFieldModel): void;
-    validate(): boolean;
 }

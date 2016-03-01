@@ -1,3 +1,3 @@
 export interface IValidator {
-    isValid(value: string): boolean;
+    isValid(value: any): boolean;
 }

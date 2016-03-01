@@ -12,15 +12,6 @@ export class ValidateModel implements IValidateModel {
         this.fields.push(validateField);
     }
 
-    public validate(): boolean {
-        this.valid = true;
-        this.fields.forEach((field: IValidateFieldModel) => {
-            let fieldValid: boolean = field.validate();
-            this.valid = this.valid && fieldValid;
-        });
-        return this.valid;
-    }
-
 
 
 }

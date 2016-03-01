@@ -6,7 +6,7 @@ export class MinValidator implements IValidator {
 
     }
 
-    public isValid(value: string): boolean {
+    public isValid(value: any): boolean {
         return (!value && value !== 0) || (_.isNumber(value) && value >= this.minValue);
     }
 }
